@@ -45,10 +45,15 @@ limitations under the License.
 package 
   vc2;
 
-{$R *.res}
+{$R *.res }
+{$R 'vc2ico.res' }
+{$IMPLICITBUILD OFF }
 {$DESCRIPTION 'VC 2.5 Public'}
-{$IMPLICITBUILD OFF}
-{$DEFINE NO_UNA_DESCR}
+{$DEFINE NO_UNA_DESCR }
+
+requires
+  rtl,
+  vcl;
 
 contains
   unavcIDE in 'unavcIDE.pas',
