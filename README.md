@@ -16,6 +16,6 @@ Should be compatible with Delphi 7 - Delphi 10 (Seattle).
 
 # running a sample
 
-1. Open Project (for example samples\vcVoiceChat\vcVoiceChat.dpr)
+1. Open a sample project (for example samples\vcVoiceChat\vcVoiceChat.dpr)
 2. Add "../../common;../../vc2" to Search path
 3. Run
