@@ -1171,6 +1171,8 @@ begin
 	for c := 0 to f_olist.count - 1 do begin
 	  //
 	  item := f_olist.get(c);
+      if (nil = item) then continue;
+
 	  if (not item.isDone and (0 < item.sc)) then begin
 	    //
 	    if (not item.isDone) then
@@ -1494,6 +1496,8 @@ begin
 	    for i := 1 to f_olist.count - 1 do begin
 	      //
 	      ol := punaIOCPSockWorkerOL(f_olist.get(i));
+          if (nil = ol) then continue;
+
 	      if (not ol.isDone and ol.olIsReceiver and (0 < ol.addrRemoteLen) and (ol.addrRemoteLen = item.addrRemoteLen) and (0 <> ol.connId)) then begin
 		//
 		{$IFDEF LOG_SOCKS_THREADS }
@@ -2106,6 +2110,8 @@ begin
 	    //
 	    ol := f_olist.get(i);
 	    inc(i);
+        if (nil = ol) then continue;
+
 	    //
 	    if (not acquireOL(ol)) then begin
 	      //
