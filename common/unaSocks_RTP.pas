@@ -4690,7 +4690,7 @@ begin
 	tcpBuf^ := swap16u(dataSize - 2);
 	//
 	// shift header pointer by 2 bytes
-	hdr := prtp_hdr(@pByte(hdr)[2]);
+	inc(pByte(hdr), 2);
       end
       else
         tcpBuf := nil;
