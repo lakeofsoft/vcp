@@ -1,18 +1,21 @@
 # vcp
 Voice Communicator Components, public full sources release.
 
-Sources are released in hope they will be usefull for someone.
-
-You may find bad design, strange names, questionable choices there. But there are also some good parts I'm proud of.
+Sources are released in hope they will be usefull.
 
 Feel free to explore and experiment.
 
-Sources should be compatible with Delphi 7 - Delphi 10 (Seattle).
-
-Currently I just made sure you can compile them, which is always a good start :)
+Should be compatible with Delphi 7 - Delphi 10 (Seattle).
 
 
 # installation
 
-TBD
+1. Open vc2/vc2.dpk
+2. Right click - Options... - Search path - add "../common"
+3. Right click - Install
 
+# running a sample
+
+1. Open a sample project (for example samples\vcVoiceChat\vcVoiceChat.dpr)
+2. Add "../../common;../../vc2" to Search path
+3. Run
