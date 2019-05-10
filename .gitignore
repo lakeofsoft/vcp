@@ -22,3 +22,6 @@
 *.otares
 *.tvsconfig
 *.vlb
+__history/
+*.stat
+*.log
