@@ -518,11 +518,11 @@ begin
     c_clb_server.checked[3] := codecOut_server.active;
     c_clb_server.checked[4] := waveOut_server.active;
     //
-    c_clb_server.items[0] := 'waveIn   - I/O: ' + bytes2str(waveIn_server.inBytes)   + '/' + bytes2str(waveIn_server.outBytes)   + ' | ' + bytes2str(waveIn_server.device.getDataAvailable(true))   + '/' + bytes2str(waveIn_server.device.getDataAvailable(false));
-    c_clb_server.items[1] := 'codecIn  - I/O: ' + bytes2str(codecIn_server.inBytes)  + '/' + bytes2str(codecIn_server.outBytes)  + ' | ' + bytes2str(codecIn_server.device.getDataAvailable(true))  + '/' + bytes2str(codecIn_server.device.getDataAvailable(false));
-    c_clb_server.items[2] := 'ipServer - I/O: ' + bytes2str(ipServer.inBytes)        + '/' + bytes2str(ipServer.outBytes)        + ' | ';
-    c_clb_server.items[3] := 'codecOut - I/O: ' + bytes2str(codecOut_server.inBytes) + '/' + bytes2str(codecOut_server.outBytes) + ' | ' + bytes2str(codecOut_server.device.getDataAvailable(true)) + '/' + bytes2str(codecOut_server.device.getDataAvailable(false));
-    c_clb_server.items[4] := 'waveOut  - I/O: ' + bytes2str(waveOut_server.inBytes)  + '/' + bytes2str(waveOut_server.outBytes)  + ' | ' + bytes2str(waveOut_server.device.getDataAvailable(true))  + '/' + bytes2str(waveOut_server.device.getDataAvailable(false));
+    c_clb_server.items[0] := 'waveIn   - I/O: ' + bytes2str(waveIn_server.inBytes[0])   + '/' + bytes2str(waveIn_server.outBytes[0])   + ' | ' + bytes2str(waveIn_server.device.getDataAvailable(true))   + '/' + bytes2str(waveIn_server.device.getDataAvailable(false));
+    c_clb_server.items[1] := 'codecIn  - I/O: ' + bytes2str(codecIn_server.inBytes[0])  + '/' + bytes2str(codecIn_server.outBytes[0])  + ' | ' + bytes2str(codecIn_server.device.getDataAvailable(true))  + '/' + bytes2str(codecIn_server.device.getDataAvailable(false));
+    c_clb_server.items[2] := 'ipServer - I/O: ' + bytes2str(ipServer.inBytes[0])        + '/' + bytes2str(ipServer.outBytes[0])        + ' | ';
+    c_clb_server.items[3] := 'codecOut - I/O: ' + bytes2str(codecOut_server.inBytes[0]) + '/' + bytes2str(codecOut_server.outBytes[0]) + ' | ' + bytes2str(codecOut_server.device.getDataAvailable(true)) + '/' + bytes2str(codecOut_server.device.getDataAvailable(false));
+    c_clb_server.items[4] := 'waveOut  - I/O: ' + bytes2str(waveOut_server.inBytes[0])  + '/' + bytes2str(waveOut_server.outBytes[0])  + ' | ' + bytes2str(waveOut_server.device.getDataAvailable(true))  + '/' + bytes2str(waveOut_server.device.getDataAvailable(false));
     //
     case (c_clb_server.itemIndex) of
 
@@ -542,11 +542,11 @@ begin
     c_clb_client.checked[3] := codecOut_client.active;
     c_clb_client.checked[4] := waveOut_client.active;
     //
-    c_clb_client.items[0] := 'waveIn   - I/O: ' + bytes2str(waveIn_client.inBytes)   + '/' + bytes2str(waveIn_client.outBytes)   + ' | ' + bytes2str(waveIn_client.device.getDataAvailable(true))   + '/' + bytes2str(waveIn_client.device.getDataAvailable(false));
-    c_clb_client.items[1] := 'codecIn  - I/O: ' + bytes2str(codecIn_client.inBytes)  + '/' + bytes2str(codecIn_client.outBytes)  + ' | ' + bytes2str(codecIn_client.device.getDataAvailable(true))  + '/' + bytes2str(codecIn_client.device.getDataAvailable(false));
-    c_clb_client.items[2] := 'ipClient - I/O: ' + bytes2str(ipClient.inBytes)        + '/' + bytes2str(ipClient.outBytes)        + ' | ';
-    c_clb_client.items[3] := 'codecOut - I/O: ' + bytes2str(codecOut_client.inBytes) + '/' + bytes2str(codecOut_client.outBytes) + ' | ' + bytes2str(codecOut_client.device.getDataAvailable(true)) + '/' + bytes2str(codecOut_client.device.getDataAvailable(false));
-    c_clb_client.items[4] := 'waveOut  - I/O: ' + bytes2str(waveOut_client.inBytes)  + '/' + bytes2str(waveOut_client.outBytes)  + ' | ' + bytes2str(waveOut_client.device.getDataAvailable(true))  + '/' + bytes2str(waveOut_client.device.getDataAvailable(false));
+    c_clb_client.items[0] := 'waveIn   - I/O: ' + bytes2str(waveIn_client.inBytes[0])   + '/' + bytes2str(waveIn_client.outBytes[0])   + ' | ' + bytes2str(waveIn_client.device.getDataAvailable(true))   + '/' + bytes2str(waveIn_client.device.getDataAvailable(false));
+    c_clb_client.items[1] := 'codecIn  - I/O: ' + bytes2str(codecIn_client.inBytes[0])  + '/' + bytes2str(codecIn_client.outBytes[0])  + ' | ' + bytes2str(codecIn_client.device.getDataAvailable(true))  + '/' + bytes2str(codecIn_client.device.getDataAvailable(false));
+    c_clb_client.items[2] := 'ipClient - I/O: ' + bytes2str(ipClient.inBytes[0])        + '/' + bytes2str(ipClient.outBytes[0])        + ' | ';
+    c_clb_client.items[3] := 'codecOut - I/O: ' + bytes2str(codecOut_client.inBytes[0]) + '/' + bytes2str(codecOut_client.outBytes[0]) + ' | ' + bytes2str(codecOut_client.device.getDataAvailable(true)) + '/' + bytes2str(codecOut_client.device.getDataAvailable(false));
+    c_clb_client.items[4] := 'waveOut  - I/O: ' + bytes2str(waveOut_client.inBytes[0])  + '/' + bytes2str(waveOut_client.outBytes[0])  + ' | ' + bytes2str(waveOut_client.device.getDataAvailable(true))  + '/' + bytes2str(waveOut_client.device.getDataAvailable(false));
     //
     case (c_clb_client.itemIndex) of
 
